@@ -1,0 +1,34 @@
+<html>
+<head><title>title display</title></head>
+<body>
+	
+	<script>
+
+	var library = [   
+	{ author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},  
+	{ author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},  
+	{ author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}  
+	];  
+
+	function sort1(x,y)   
+	{  
+		if (x.title < y.title)  
+			return -1;  
+		if (x.title > y.title)  
+			return 1;  
+		return 0;  
+	}  
+
+	console.log(library.sort(sort1));  
+	// for (i in library){
+	// 	document.write(i+"</br>");
+	// 	for (key in library[i]){
+	// 		document.write( key + ": " + library[i]);
+	// 	}
+	// }
+
+
+	</script>
+</body>
+</html>
+

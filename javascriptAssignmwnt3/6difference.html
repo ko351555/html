@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Difference of two arrays</title>
+</head>
+<body>
+	<script>
+	var a=[2,3,6,9];
+	var b=[3,6];
+	Array.prototype.difference = function(e) {
+		return this.filter(function(i) {return e.indexOf(i) <0;});
+	};
+	document.write(a.difference(b));
+	</script>
+	
+</body>
+</html>

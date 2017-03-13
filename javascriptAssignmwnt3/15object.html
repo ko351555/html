@@ -1,0 +1,46 @@
+<html>
+<head><title>object</title></head>
+<body>
+	
+	<script>
+	var objects =
+	[{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
+	{'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
+	{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
+	{'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
+	{'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
+	{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];	
+
+	var exp=objects.forEach(function(x)
+	{
+		if(x.occupation=="Programmer")
+		{
+			console.log(x);
+		}
+	});
+	var sort_arr=objects.sort(function(a,b)
+	{
+		return b.age-a.age;
+	}) ;  
+
+	console.log(sort_arr);  
+	var obj={}
+	obj['TeamLeader']=[];
+	obj['Programmer']=[];
+	var myex=objects.forEach(function(x)
+	{
+		if(x.occupation=="Team Leader")
+		{
+			delete x.occupation;
+			obj['TeamLeader'].push(x);
+		}
+		else 	{
+			delete x.occupation;
+			obj['Programmer'].push(x);
+		}
+
+	});
+	console.log(obj);
+	</script>
+</body>
+</html>
